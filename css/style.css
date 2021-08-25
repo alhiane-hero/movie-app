@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #272532;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #373b69;
+}
+
+header form #search {
+  width: 250px;
+  padding: 0.8rem;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid #272532;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+header form #search::placeholder {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#main {
+  padding: 1.3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 1.3rem;
+}
+
+#main .movie {
+  position: relative;
+  overflow: hidden;
+}
+
+#main .movie .movie-poster {
+  display: flex;
+}
+
+#main .movie .movie-poster img {
+  max-width: 100%;
+}
+
+#main .movie-info {
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+#main .movie-info .title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.1rem;
+}
+
+#main .movie-info span {
+  padding: 0.3rem 0.6rem;
+  background-color: #373b69;
+  border-radius: 0.3rem;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+#main .movie-info span.green {
+  color: #080;
+}
+#main .movie-info span.orange {
+  color: orange;
+}
+#main .movie-info span.red {
+  color: rgb(194, 53, 53);
+}
+
+#main .overview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  padding: 1rem;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#main .movie:hover .overview {
+  transform: translateY(0);
+}
+
+#main .overview h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+#main .overview p {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: #777;
+  line-height: 1.7rem;
+}
